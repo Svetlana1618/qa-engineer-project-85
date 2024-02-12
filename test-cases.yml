@@ -1,0 +1,76 @@
+--- # В данном файле прописана только часть кейс-тестов для примера
+- summary: |
+    Пользователь должен иметь возможность создать игру
+  requirement: |
+    При переходе по кнопке "Create game" Пользователю открывается форма, после заполнения, которой создается игра.
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Level = 2 звезды
+    Game type = With a bot
+    Time control = 11 min
+    Choose task by name or tags = rect_area
+  steps:
+    - Нажимаем кнопку "Create game"
+    - Выбираем Level
+    - Выбираем Game type
+    - Выбираем Time control
+    - Выбираем Choose task by name or tags
+    - Нажимаем "Create battle"
+  expected-result: |
+    Пользователь должен попасть на страницу с игрой
+
+- summary: |
+    Пользователь должен иметь возможность менять язык программирования во время игры
+  requirement: |
+    Находясь в игре пользователь должен иметь возможность поменять язык программирования
+  prerequisites:
+    Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Level = 2 звезды
+    Game type = With a bot
+    Time control = 11 min
+    Choose task by name or tags = rect_area
+    Язык программирования Python
+  steps:
+    - Нажимаем кнопку "Create game"
+    - Выбираем Level
+    - Выбираем Game type
+    - Выбираем Time control
+    - Выбираем Choose task by name or tags
+    - Нажимаем "Create battle"
+    - В выпадающем списке выбоа языка программирования выбираем Python
+  expected-result: |
+    В окне выбора языка устанавливается значение Python
+
+- summary: |
+    Пользователь должен иметь рейтинг
+  requirement: |
+    Пользователь должен иметь возможность видеть свой рейтинг
+  prerequisites:
+    Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Нет тестовых данных
+  steps:
+    - Перехоим на страницу игры
+    - Проверяем рядом фото наличие рейтинга
+  expected-result: |
+    Рядом с фото профиля Пользователь видит иконку диаграмму и цифры, офозначающие его рейтинг
+
+- summary: |
+    Пользователь должн иметь возможность общаться в чате
+  requirement: |
+    Пользователь должен иметь возможность писать в чат и отвечать в чате
+  prerequisites:
+    Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Всем привет!
+  steps:
+    - Перехоим на страницу игры 
+    - Находим поле ввода и рядом кнопку "Send"
+    - Отправляем сообщение
+  expected-result: |
+    Отправленное сообщение должно появиться в окне чата под открывающимся списком "General"
+
+  
+
