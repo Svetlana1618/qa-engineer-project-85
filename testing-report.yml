@@ -20,7 +20,7 @@
   status: pass
 
 - summary: |
-    Дата в History должна отображаться с указанием годаы
+    Дата в History должна отображаться с указанием года
   status: fail
 
 - summary: |
